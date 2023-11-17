@@ -33,3 +33,8 @@ func (s *Stack[T]) Pop() (T, bool) {
 	s.elements = s.elements[:index]
 	return element, true
 }
+
+// Length returns the number of elements in the stack.
+func (s *Stack[T]) Length() int {
+	return len(s.elements)
+}
